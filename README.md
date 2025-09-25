@@ -22,19 +22,19 @@ La estructura del repositorio es la siguiente:
 
 /mi-negocio-familiar/
 
- README.md (descripción del negocio)
+ - README.md (descripción del negocio)
 
- diagrama_relacional.png
+ - diagrama_relacional.png
 
- crear_tablas.sql
+ - crear_tablas.sql
 
- insertar_datos.sql
+ - insertar_datos.sql
 
- consultas_complejas.sql
+ - consultas_complejas.sql
 
- documentacion_llaves.md
+ - documentacion_llaves.md
 
- video_demostracion.mp4 (máx 3 minutos)
+ - video_demostracion.mp4 (máx 3 minutos)
 
 
 Sobre las tecnologías, usamos PostgreSQL como base de datos relacional, DBeaver para administración y consultas, y herramientas como Mermaid o Draw.io para el diseño de diagramas entidad-relación.
