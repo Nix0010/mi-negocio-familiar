@@ -22,11 +22,17 @@ La estructura del repositorio es la siguiente:
 
 /mi-negocio-familiar/
 ├── README.md (descripción del negocio)
+
 ├── diagrama_relacional.png
+
 ├── crear_tablas.sql
+
 ├── insertar_datos.sql
+
 ├── consultas_complejas.sql
+
 ├── documentacion_llaves.md
+
 └── video_demostracion.mp4 (máx 3 minutos)
 
 
