@@ -1,60 +1,22 @@
 # Boutique de Pijamas - Proyecto Familiar
 
-Este proyecto corresponde a una **boutique de ropa especializada en pijamas**, un negocio familiar que nació con la idea de ofrecer comodidad, calidad y estilo a todas las personas que disfrutan de esos pequeños momentos de descanso en casa.  
+Este proyecto corresponde a una boutique de ropa especializada en pijamas, un negocio familiar que nació con la idea de ofrecer comodidad, calidad y estilo a todas las personas que disfrutan de esos pequeños momentos de descanso en casa.
 
+La historia de la boutique empieza como un emprendimiento familiar. Todo surge de la necesidad de tener ropa cómoda para dormir que no solo fuera práctica, sino también bonita y variada. Al inicio hacíamos pijamas a mano en un pequeño taller, y poco a poco, gracias a la confianza de nuestros clientes, el negocio fue creciendo. Hoy contamos con un catálogo más amplio que incluye pijamas para mujeres, hombres y niños, con distintos diseños, tallas y materiales.
 
+A medida que fuimos creciendo nos dimos cuenta de la importancia de llevar un control más organizado de lo que hacíamos: la gestión de clientes, el seguimiento de pedidos, el control de stock y los pagos. Para dar solución a esa necesidad armamos un proyecto de base de datos usando PostgreSQL y DBeaver, que nos ayudan a mantener todo en orden y facilitar el trabajo.
 
-## Historia y descripción del negocio
-La **Boutique de Pijamas** surge como un emprendimiento familiar que busca dar respuesta a una necesidad cotidiana: tener ropa cómoda para dormir que no solo sea práctica, sino también bonita y variada.  
-Comenzamos ofreciendo pijamas hechos a mano en un pequeño taller y con el tiempo el negocio fue creciendo gracias a la confianza de nuestros clientes. Hoy contamos con un catálogo que incluye pijamas para **mujeres, hombres y niños**, con diferentes diseños, tallas y materiales.  
+En cuanto al sistema, se pensó en unas tablas principales:  
+- **Clientes**: guarda la información de cada comprador (nombre, contacto, documento).  
+- **Empleados**: incluye los datos del personal que atiende ventas y administración.  
+- **Productos**: catálogo de pijamas con categorías, tallas, precios y códigos únicos.  
+- **Pedidos**: registro de compras hechas por los clientes.  
+- **Detalle_pedidos**: desglose de los productos que componen cada pedido.  
+- **Pagos**: registro de transacciones, métodos de pago y responsables.  
 
-Al ser un negocio en crecimiento, vimos la importancia de llevar un control más organizado de nuestros procesos: desde la **gestión de clientes** hasta el **seguimiento de pedidos, control de stock y pagos**. Este proyecto de base de datos busca dar solución a esa necesidad, apoyándose en herramientas digitales modernas como **PostgreSQL y DBeaver**.
+Todas estas tablas tienen llaves primarias (PK), más de 8 llaves foráneas (FK) para conectar la información entre clientes, empleados, pedidos, productos y pagos, y en cada tabla se definieron varias llaves candidatas para garantizar consistencia. De esta forma todo queda relacionado de manera lógica y es más fácil consultar cualquier aspecto del negocio.
 
+Para cumplir con los requisitos académicos, este proyecto cuenta con al menos 5 tablas interconectadas, todas las PKs claras, 8 FKs, 3 llaves candidatas por tabla, 30 registros reales de clientes, empleados y productos, además de 10 consultas complejas con JOIN que permiten generar reportes como ventas, productos más vendidos o clientes frecuentes.
 
+La estructura del repositorio es la siguiente:
 
-## Tablas principales del sistema
-1. **Clientes**: guarda la información de cada comprador, como nombre, contacto y documento de identidad.  
-2. **Empleados**: incluye datos del personal encargado de ventas y administración.  
-3. **Productos**: catálogo de pijamas, con sus categorías, tallas, precios y códigos únicos.  
-4. **Pedidos**: registro de compras realizadas por los clientes.  
-5. **Detalle_pedidos**: desglosa qué productos componen cada pedido y en qué cantidad.  
-6. **Pagos**: controla las transacciones realizadas, métodos de pago y responsables de procesarlas.  
-
-
-##  Llaves y relaciones
-- Todas las tablas cuentan con **llaves primarias (PK)**.  
-- Se definieron más de **8 llaves foráneas (FK)** para conectar clientes, empleados, pedidos, productos y pagos.  
-- Cada tabla tiene **3 o más llaves candidatas**, lo que permite garantizar la integridad y consistencia de los datos.  
-
-Este diseño permite que la información esté siempre relacionada de manera lógica y que sea sencillo consultar cualquier aspecto del negocio.
-
-
-## Requisitos académicos cumplidos
-✔ 5 tablas mínimo interconectadas  
-✔ Todas las PKs identificadas  
-✔ 8 FKs conectando tablas  
-✔ 3 llaves candidatas por tabla  
-✔ 30 registros con datos reales inspirados en clientes, empleados y productos de la boutique  
-✔ 10 consultas complejas con `JOIN` para obtener reportes útiles (ventas, productos más vendidos, clientes frecuentes, etc.)  
-
-
-##  Estructura del repositorio
-```
-/mi-negocio-familiar/
-├── 📄 README.md (descripción del negocio)
-├── 📊 diagrama_relacional.png
-├── 🗃️ crear_tablas.sql
-├── 📝 insertar_datos.sql
-├── 🔍 consultas_complejas.sql
-├── 📋 documentacion_llaves.md
-└── 🎥 video_demostracion.mp4 (máx 3 minutos)
-```
-
-
-##  Tecnologías utilizadas
-- **PostgreSQL** → Base de datos relacional.  
-- **DBeaver** → Herramienta de gestión para administración y consultas.  
-- **Mermaid / Draw.io** → Diseño de diagramas entidad-relación.  
-
-
-Más allá de los datos y las consultas, este proyecto nos recuerda que detrás de cada pedido hay una persona que confía en nosotros, y que la organización y el buen servicio son la base para seguir construyendo un futuro próspero.  
